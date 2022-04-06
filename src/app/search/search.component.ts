@@ -7,7 +7,7 @@ import { MoviesService } from '../movies.service';
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
-  busqueda: string | undefined;
+  busqueda: string = '';
 
   constructor(private ServiceMovies: MoviesService) {}
 
@@ -15,10 +15,8 @@ export class SearchComponent implements OnInit {
 
   buscar() {
     console.log('Pasa por buscar()');
-    this.ServiceMovies.getQuery('&query=&{this.busqueda}').subscribe(
-      (response) => {
-        console.log('la respuesta es: ' + response);
-      }
-    );
+    this.ServiceMovies.getQuery(this.busqueda).subscribe((response) => {
+      console.log('la respuesta es: ' + response);
+    });
   }
 }

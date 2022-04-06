@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MoviesService {
   url =
-    'https://api.themoviedb.org/3/movie/550?api_key=bdddb1edc98dc169584e175d1ee3c2d1';
+    'https://api.themoviedb.org/3/search/movie?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query=';
 
   constructor(private http: HttpClient) {}
 
