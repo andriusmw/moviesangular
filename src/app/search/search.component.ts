@@ -15,8 +15,10 @@ export class SearchComponent implements OnInit {
 
   buscar() {
     console.log('Pasa por buscar()');
-    this.ServiceMovies.getQuery('&s=' + this.busqueda).subscribe((response) => {
-      console.log('la respuesta es: ' + response);
-    });
+    this.ServiceMovies.getQuery('&query=&{this.busqueda}').subscribe(
+      (response) => {
+        console.log('la respuesta es: ' + response);
+      }
+    );
   }
 }
