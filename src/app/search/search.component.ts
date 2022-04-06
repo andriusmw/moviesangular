@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { MoviesService } from '../movies.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.css'],
 })
 export class SearchComponent implements OnInit {
+  busqueda: string | undefined;
 
-  constructor() { }
+  constructor(private ServiceMovies: MoviesService) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  buscar() {
+    console.log('Pasa por buscar()');
+    this.ServiceMovies.getQuery('&s=' + this.busqueda).subscribe((response) => {
+      console.log('la respuesta es: ' + response);
+    });
   }
-
 }
