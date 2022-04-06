@@ -8,6 +8,13 @@ export class MoviesService {
   url =
     'https://api.themoviedb.org/3/search/movie?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query=';
 
+  /*url =
+    ' https://api.themoviedb.org/3/search/movie?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query=harry';
+
+    El endpoint es correcto, si lo pongo en el navegador me devuelve un chorro de datos y un array de peliculas
+    que empiezan o coinciden con la búqueda harry, me falla por otro motivo desconocido por ahora.
+    */
+
   constructor(private http: HttpClient) {}
 
   getQuery(query: string) {
