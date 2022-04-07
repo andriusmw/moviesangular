@@ -18,7 +18,7 @@ export class MoviesService {
   constructor(private http: HttpClient) {}
 
   getQuery(query: string) {
-    const url = '{this.url}{query}';
+    const url = '${this.url}${query}';
     //Agrega nuevos parámetros a la url que para interactuar con los endpoints de la API
 
     return this.http.get(url);
