@@ -22,7 +22,9 @@ export class SearchComponent implements OnInit {
 
     this.ServiceMovies.getQuery(this.busqueda).subscribe((response) => {
       /*'{this.busqueda}'*/
-      console.log('la respuesta es: ' + response);
+      console.log(response);
+      /*arreglado, si ponía ALGO MÁS en el console log, en vez de
+      mostrar el array correctamente me ponia el texto que le habia dicho y el array no salia, se ve que no se puede "sumar" a nada */
     });
   }
 }
