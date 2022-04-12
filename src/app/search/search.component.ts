@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class SearchComponent implements OnInit {
   busqueda: string = '';
+  resultados: any = [];
 
   constructor(private ServiceMovies: MoviesService) {}
 
@@ -23,8 +24,12 @@ export class SearchComponent implements OnInit {
     this.ServiceMovies.getQuery(this.busqueda).subscribe((response) => {
       /*'{this.busqueda}'*/
       console.log(response);
+
       /*arreglado, si ponía ALGO MÁS en el console log, en vez de
       mostrar el array correctamente me ponia el texto que le habia dicho y el array no salia, se ve que no se puede "sumar" a nada */
+      this.resultados = response;
+      //Crea otro array donde le pasa los datos del Objeto response para que sean accesibles desde el html
+      //en el ngfor, porque response seria el array a tratar pero no está declarado en el javascript y no es accesible.
     });
   }
 }

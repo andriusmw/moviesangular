@@ -15,11 +15,13 @@
     </div>
   </div>
   <div class="row mt-3">
-    <div class="col-3">
+    <div class="col-3" *ngFor="let item of resultados.results">
+      <!--En teoría el ngFor recibe los datos del array response y debería de iterar para cada elemento-->
+      <!--Como le hemos pasado response directamente, y el array está en response.results hay que poner resultados.results-->
       <div class="card">
-        <img src="" class="card-img-top" alt="" />
+        <img [src]="item.Poster_path" class="card-img-top" alt="no-image" />
         <div class="card-body">
-          <h5 class="card-title">Card Title</h5>
+          <h5 class="card-title">{{ item.title }}</h5>
           <p class="card-text">text</p>
           <a href="#" class="btn btn-primary">Go Somewhere</a>
         </div>
