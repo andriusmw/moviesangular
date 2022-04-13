@@ -4,7 +4,7 @@ import { DetailsComponent } from './details/details.component';
 import { SearchComponent } from './search/search.component';
 
 const routes: Routes = [
-  //{ path: '', pathMatch: 'full', redirectTo: 'search' },
+  //{ path: '', pathMatch: 'full', redirectTo: 'search' }, --> Se cargaba el routing de vista detalle, mirar de ser menos restrictivo
   //{ path: '**', pathMatch: 'full', redirectTo: 'search' },
   //Cuando busca algo que no está en las rutas redireciona a search
   { path: 'search', component: SearchComponent },
