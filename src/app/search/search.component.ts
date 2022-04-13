@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgModel } from '@angular/forms';
 import { MoviesService } from '../movies.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -12,7 +15,7 @@ export class SearchComponent implements OnInit {
   busqueda: string = '';
   resultados: any = [];
 
-  constructor(private ServiceMovies: MoviesService) {}
+  constructor(private ServiceMovies: MoviesService, private route: Router) {}
 
   ngOnInit(): void {}
 
@@ -31,5 +34,11 @@ export class SearchComponent implements OnInit {
       //Crea otro array donde le pasa los datos del Objeto response para que sean accesibles desde el html
       //en el ngfor, porque response seria el array a tratar pero no está declarado en el javascript y no es accesible.
     });
+  }
+
+  detalle(id: string) {
+    alert(id);
+    // alert(this.route.navigate(['/details', id]));
+    this.route.navigate(['details/', id]);
   }
 }
