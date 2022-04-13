@@ -9,6 +9,8 @@ import { ActivatedRoute, Route, RouterModule } from '@angular/router';
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
+  detail: any;
+
   constructor(
     private router: ActivatedRoute,
     private movieService: MoviesService,
@@ -19,6 +21,7 @@ export class DetailsComponent implements OnInit {
       this.DetailsService.getQueryDetails(params['id']).subscribe(
         (response) => {
           console.log(response);
+          this.detail = response;
         }
       );
     });

@@ -37,8 +37,8 @@ export class SearchComponent implements OnInit {
   }
 
   detalle(id: string) {
-    alert(id);
-    // alert(this.route.navigate(['/details', id]));
+    //alert(id);
+    // para pasarle al router una ruta con un id para navegar, si solo fuera el path podria usar routerlink;
     this.route.navigate(['details/', id]);
   }
 }
