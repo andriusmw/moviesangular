@@ -11,8 +11,15 @@
         class="imagen-detalle"
       />
     </div>
-  </div>
-  <div class="col-8">
-    <h2>{{ detail.title }}</h2>
+
+    <div class="col-8">
+      <h2>{{ detail.title }}</h2>
+      <p>{{ detail.release_date }}</p>
+      <p>{{ detail.vote_average }}</p>
+      <p>
+        <span *ngFor="let item of detail.genres"> {{ item.name }}, </span>
+      </p>
+      <p>{{ detail.overview }}</p>
+    </div>
   </div>
 </div>
