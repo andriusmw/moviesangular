@@ -1,3 +1,4 @@
-* {
+section {
   background-color: darkslateblue;
+  min-height: 100vh;
 }

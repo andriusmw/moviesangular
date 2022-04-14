@@ -19,3 +19,10 @@ div {
 .card-body {
   background-color: aliceblue;
 }
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  /*Bootstrap le pone un margen left y right de 0.5 que hace que no quepa bien en la pantalla , se lo quito
+  así porque no queda más remedio.*/
+}
