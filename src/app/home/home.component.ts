@@ -7,6 +7,8 @@ import { TrendingService } from '../trending.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  resultados: any = [];
+
   constructor(private Trending: TrendingService) {}
 
   ngOnInit(): void {
@@ -16,7 +18,7 @@ export class HomeComponent implements OnInit {
 
       /*arreglado, si ponía ALGO MÁS en el console log, en vez de
       mostrar el array correctamente me ponia el texto que le habia dicho y el array no salia, se ve que no se puede "sumar" a nada */
-      //this.resultados = response;
+      this.resultados = response;
     });
   }
 }
