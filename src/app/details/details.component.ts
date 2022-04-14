@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MoviesDetailsService } from '../movies-details.service';
 import { MoviesService } from '../movies.service';
 import { ActivatedRoute, Route, Router, RouterModule } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-details',
@@ -15,7 +16,8 @@ export class DetailsComponent implements OnInit {
     private router: ActivatedRoute,
     private movieService: MoviesService,
     private DetailsService: MoviesDetailsService,
-    private route: Router
+    private route: Router,
+    private location: Location
   ) {
     this.router.params.subscribe((params) => {
       alert(params['id']);
@@ -32,5 +34,9 @@ export class DetailsComponent implements OnInit {
 
   volver() {
     this.route.navigate(['search']);
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

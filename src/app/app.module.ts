@@ -7,9 +7,11 @@ import { SearchComponent } from './search/search.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchComponent, DetailsComponent],
+  declarations: [AppComponent, SearchComponent, DetailsComponent, NavbarComponent, HomeComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
