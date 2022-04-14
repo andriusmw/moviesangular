@@ -35,4 +35,8 @@ export class DetailsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  Alertar() {
+    alert('Debes elegir un plan de subscripción para ver las películas');
+  }
 }
