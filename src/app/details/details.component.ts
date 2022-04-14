@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesDetailsService } from '../movies-details.service';
 import { MoviesService } from '../movies.service';
-import { ActivatedRoute, Route, RouterModule } from '@angular/router';
+import { ActivatedRoute, Route, Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-details',
@@ -14,7 +14,8 @@ export class DetailsComponent implements OnInit {
   constructor(
     private router: ActivatedRoute,
     private movieService: MoviesService,
-    private DetailsService: MoviesDetailsService
+    private DetailsService: MoviesDetailsService,
+    private route: Router
   ) {
     this.router.params.subscribe((params) => {
       alert(params['id']);
@@ -28,4 +29,8 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  volver() {
+    this.route.navigate(['search']);
+  }
 }
