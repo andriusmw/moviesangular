@@ -20,7 +20,7 @@ export class DetailsComponent implements OnInit {
     private location: Location
   ) {
     this.router.params.subscribe((params) => {
-      alert(params['id']);
+      // alert(params['id']);
       this.DetailsService.getQueryDetails(params['id']).subscribe(
         (response) => {
           console.log(response);
@@ -31,10 +31,6 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-
-  volver() {
-    this.route.navigate(['search']);
-  }
 
   goBack(): void {
     this.location.back();
