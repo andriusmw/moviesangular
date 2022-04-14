@@ -5,10 +5,16 @@
 button {
   margin-left: 1%;
 }
-span {
+#titulo {
   color: white;
   background-color: red;
   padding: 1.2%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: medium;
+  margin-left: 0%;
+}
+
+nav {
+  background-color: darkslateblue;
+  border-bottom: 2px solid aquamarine;
 }
