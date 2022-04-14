@@ -8,7 +8,8 @@ video {
   width: 70%;
 }
 
-div {
+div,
+section {
   background-color: darkslateblue;
 }
 
@@ -19,4 +20,19 @@ div {
 
 .card-body {
   background-color: aliceblue;
+}
+
+.container {
+  margin: 0%;
+  max-width: 100%;
+  /*Bootsrap le da un margin que no quiero y un max-width de 720px, con esto se lo quito*/
+}
+
+img {
+  padding-left: 30%;
+}
+
+section h2 {
+  padding-left: 40%;
+  padding-top: 2%;
 }
