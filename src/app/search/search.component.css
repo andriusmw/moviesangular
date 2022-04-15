@@ -15,4 +15,5 @@ div {
   margin: 0%;
   max-width: 100%;
   /*Bootsrap le da un margin que no quiero y un max-width de 720px, con esto se lo quito*/
+  min-height: 80vh;
 }

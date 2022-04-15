@@ -11,9 +11,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { SeriessearchComponent } from './seriessearch/seriessearch.component';
 import { SeriesdetailsComponent } from './seriesdetails/seriesdetails.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchComponent, DetailsComponent, NavbarComponent, HomeComponent, SeriessearchComponent, SeriesdetailsComponent],
+  declarations: [AppComponent, SearchComponent, DetailsComponent, NavbarComponent, HomeComponent, SeriessearchComponent, SeriesdetailsComponent, FooterComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
