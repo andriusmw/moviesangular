@@ -52,7 +52,7 @@ export class MoviesDetailsService {
   SeriesgetQueryDetails(TvID: string) {
     const UrlDetailsSeriesF =
       this.UrlDetailsSeries1 + TvID + this.UrlDetailsSeries2;
-    //concateno la URI junto con el movieID que he recibido porque la API tiene esa estructura.
+    //concateno la URI junto con el TvID que he recibido porque la API tiene esa estructura.
     console.log(
       'Seriesurl completa= ' +
         this.UrlDetailsSeries1 +

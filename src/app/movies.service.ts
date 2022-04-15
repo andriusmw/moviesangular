@@ -13,8 +13,8 @@ export class MoviesService {
   SeriesUrl =
     'https://api.themoviedb.org/3/search/tv?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query&language=en-US&page=1&include_adult=false&query=';
 
-  /*********************************************************************************************
-   URL completas para pruebas en el navegador
+  /************************ URL completas para pruebas en el navegador **************************************
+
   url =
     ' https://api.themoviedb.org/3/search/movie?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query=harry';
 
