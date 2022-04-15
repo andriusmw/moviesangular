@@ -10,9 +10,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { SeriessearchComponent } from './seriessearch/seriessearch.component';
+import { SeriesdetailsComponent } from './seriesdetails/seriesdetails.component';
 
 @NgModule({
-  declarations: [AppComponent, SearchComponent, DetailsComponent, NavbarComponent, HomeComponent, SeriessearchComponent],
+  declarations: [AppComponent, SearchComponent, DetailsComponent, NavbarComponent, HomeComponent, SeriessearchComponent, SeriesdetailsComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

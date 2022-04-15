@@ -39,6 +39,6 @@ export class SeriessearchComponent implements OnInit {
   seriesdetalle(id: string) {
     //alert(id);
     // para pasarle al router una ruta con un id para navegar, si solo fuera el path podria usar routerlink;
-    this.route.navigate(['details/', id]);
+    this.route.navigate(['seriesdetails/', id]);
   }
 }

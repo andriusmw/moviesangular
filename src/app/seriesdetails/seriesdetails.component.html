@@ -1,0 +1,39 @@
+<section>
+  <button class="btn btn-primary mb-2 goback" (click)="goBack()">
+    Go Back
+  </button>
+</section>
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-4">
+      <img
+        src="https://www.themoviedb.org/t/p/w188_and_h282_bestv2{{
+          detail.poster_path
+        }}"
+        alt="no-image"
+        class="imagen-detalle"
+      />
+    </div>
+
+    <div class="col-8">
+      <h2>{{ detail.title }}</h2>
+      <p>{{ detail.release_date }}</p>
+      <p>{{ detail.vote_average }}</p>
+      <p>
+        <span *ngFor="let item of detail.genres"> {{ item.name }}, </span>
+      </p>
+      <p>{{ detail.overview }}</p>
+    </div>
+    <section>
+      <h2>video</h2>
+      <video
+        controls
+        src="../../assets/videos/intro.mp4"
+        muted
+        poster="../../assets/images/universal.jpg"
+        (click)="Alertar()"
+      ></video>
+      <!--<img src="assets/img/img1.png" alt="no-image">-->
+    </section>
+  </div>
+</div>
