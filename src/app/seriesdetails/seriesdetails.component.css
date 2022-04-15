@@ -1,0 +1,38 @@
+.goback {
+  margin-left: 85%;
+  margin-top: 3%;
+}
+
+video {
+  margin-left: 15%;
+  width: 70%;
+}
+
+div,
+section {
+  background-color: darkslateblue;
+}
+
+.card {
+  background-color: aquamarine;
+  margin-bottom: 8%;
+}
+
+.card-body {
+  background-color: aliceblue;
+}
+
+.container {
+  margin: 0%;
+  max-width: 100%;
+  /*Bootsrap le da un margin que no quiero y un max-width de 720px, con esto se lo quito*/
+}
+
+img {
+  padding-left: 30%;
+}
+
+section h2 {
+  padding-left: 48%;
+  padding-top: 2%;
+}

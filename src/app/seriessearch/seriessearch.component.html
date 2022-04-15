@@ -30,7 +30,7 @@
         He ido a la página TheMovieDB y he buscado una peli en su componente de búsqueda y he comparado la URL de la imagen
         para saber cuál era la cabecera que había que poner.-->
         <div class="card-body">
-          <h5 class="card-title">{{ item.title }}</h5>
+          <h5 class="card-title">{{ item.name }}</h5>
           <p class="card-text">{{ item.release_date }}</p>
           <p>{{ item.vote_average }}</p>
           <a class="btn btn-primary" (click)="seriesdetalle(item.id)">
