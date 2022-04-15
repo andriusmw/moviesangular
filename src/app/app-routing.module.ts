@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
 import { SearchComponent } from './search/search.component';
 import { HomeComponent } from './home/home.component';
+import { SeriessearchComponent } from './seriessearch/seriessearch.component';
 
 const routes: Routes = [
   //{ path: '', pathMatch: 'full', redirectTo: 'search' }, --> Se cargaba el routing de vista detalle, mirar de ser menos restrictivo
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'seriessearch', component: SeriessearchComponent },
   //{ path: 'details', component: DetailsComponent },
   { path: 'details/:id', component: DetailsComponent },
 ];

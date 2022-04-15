@@ -8,12 +8,23 @@ export class MoviesService {
   url =
     'https://api.themoviedb.org/3/search/movie?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query=';
 
-  /*url =
+  SeriesUrl =
+    'https://api.themoviedb.org/3/search/tv?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query&language=en-US&page=1&include_adult=false&query=';
+
+  /*********************************************************************************************
+  url =
     ' https://api.themoviedb.org/3/search/movie?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query=harry';
 
-    El endpoint es correcto, si lo pongo en el navegador me devuelve un chorro de datos y un array de peliculas
-    que empiezan o coinciden con la búqueda harry, me falla por otro motivo desconocido por ahora.
-    */
+
+
+      https://api.themoviedb.org/3/search/tv?api_key=bdddb1edc98dc169584e175d1ee3c2d1&query&language=en-US&page=1&include_adult=false&query=
+
+      Este sería el endpoint para obtener series en la misma app, tendría que pasarle al query la búsqueda
+      igual que hago con las películas.
+      https://api.themoviedb.org/3/tv/{tv_id}?api_key=<<api_key>>&language=en-US
+      y este sería el endpoint para obtener los detalles de la serie, se le pasa el tv_id igual que lo hago en el details.service
+
+   *********************************************************************************************   */
 
   constructor(private http: HttpClient) {}
 
@@ -22,5 +33,15 @@ export class MoviesService {
     //Agrega nuevos parámetros a la url que para interactuar con los endpoints de la API
     console.log('url completa= ' + url);
     return this.http.get(url);
+  }
+
+  /***************  get query para la búsqueda de series **************/
+  /*
+  /****************************************************************** */
+  SeriesgetQuery(Seriesquery: string) {
+    const SeriesUrl = this.SeriesUrl + Seriesquery;
+    //Agrega nuevos parámetros a la url que para interactuar con los endpoints de la API
+    console.log('SeriesUrl completa= ' + SeriesUrl);
+    return this.http.get(SeriesUrl);
   }
 }
